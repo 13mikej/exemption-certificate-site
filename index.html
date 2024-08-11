@@ -55,25 +55,46 @@
 </head>
 <body>
     <div class="container">
-        <h1>Request an Exemption Certificate</h1>
-        <form onsubmit="alert('Form submitted successfully!'); return false;">
-            <label for="entityName">Entity Name:</label>
-            <input type="text" id="entityName" name="entityName" required>
+        <h1>Request a Texas Sales and Use Tax Resale Certificate</h1>
+        <form action="process_form.php" method="post">
+            <label for="purchaserName">Name of Purchaser, Firm, or Agency:</label>
+            <input type="text" id="purchaserName" name="purchaserName" required>
 
-            <label for="state">State of Operation:</label>
-            <select id="state" name="state" required>
-                <option value="">Select a state...</option>
-                <option value="TX">Texas</option>
-            </select>
+            <label for="phone">Phone (Area Code and Number):</label>
+            <input type="text" id="phone" name="phone" required>
 
-            <label for="certificateType">Certificate Type:</label>
-            <select id="certificateType" name="certificateType" required>
-                <option value="resale">Resale Certificate</option>
-                <option value="exemption">Exemption Certificate</option>
-            </select>
+            <label for="address">Address (Street & number, P.O. Box, or Route number):</label>
+            <input type="text" id="address" name="address" required>
 
-            <p>Download the Texas Sales and Use Tax Resale Certificate form <a href="https://comptroller.texas.gov/taxes/sales/forms/01-339.pdf" target="_blank">here</a>.</p>
-            <p>Download the Texas Sales and Use Tax Exemption Certification form <a href="https://comptroller.texas.gov/taxes/sales/forms/01-339.pdf" target="_blank">here</a>.</p>
+            <label for="cityStateZip">City, State, ZIP Code:</label>
+            <input type="text" id="cityStateZip" name="cityStateZip" required>
+
+            <label for="permitNumber">Texas Sales and Use Tax Permit Number (11 digits):</label>
+            <input type="text" id="permitNumber" name="permitNumber" required>
+
+            <label for="outOfStateRetailerNumber">Out-of-state retailer's registration number or RFC number (for retailers based in Mexico):</label>
+            <input type="text" id="outOfStateRetailerNumber" name="outOfStateRetailerNumber">
+
+            <label for="sellerName">Seller:</label>
+            <input type="text" id="sellerName" name="sellerName" required>
+
+            <label for="sellerAddress">Seller's Street Address:</label>
+            <input type="text" id="sellerAddress" name="sellerAddress" required>
+
+            <label for="sellerCityStateZip">Seller's City, State, ZIP Code:</label>
+            <input type="text" id="sellerCityStateZip" name="sellerCityStateZip" required>
+
+            <label for="itemDescription">Description of Items to be Purchased:</label>
+            <textarea id="itemDescription" name="itemDescription" required></textarea>
+
+            <label for="businessActivity">Description of Business Activity or Type of Items Normally Sold:</label>
+            <textarea id="businessActivity" name="businessActivity" required></textarea>
+
+            <label for="purchaserTitle">Purchaser Title:</label>
+            <input type="text" id="purchaserTitle" name="purchaserTitle" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
 
             <input type="submit" value="Submit">
         </form>
