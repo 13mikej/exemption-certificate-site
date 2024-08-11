@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemption Certificate Request</title>
+    <title>Request an Exemption Certificate</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -44,23 +44,26 @@
         input[type="submit"]:hover {
             background-color: #218838;
         }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Request an Exemption Certificate</h1>
-        <form>
+        <form onsubmit="alert('Form submitted successfully!'); return false;">
             <label for="entityName">Entity Name:</label>
             <input type="text" id="entityName" name="entityName" required>
 
             <label for="state">State of Operation:</label>
             <select id="state" name="state" required>
                 <option value="">Select a state...</option>
-                <option value="AL">Alabama</option>
-                <option value="AK">Alaska</option>
                 <option value="TX">Texas</option>
-                <!-- Add other states here -->
-                <option value="WY">Wyoming</option>
             </select>
 
             <label for="certificateType">Certificate Type:</label>
@@ -68,6 +71,9 @@
                 <option value="resale">Resale Certificate</option>
                 <option value="exemption">Exemption Certificate</option>
             </select>
+
+            <p>Download the Texas Sales and Use Tax Resale Certificate form <a href="https://comptroller.texas.gov/taxes/sales/forms/01-339.pdf" target="_blank">here</a>.</p>
+            <p>Download the Texas Sales and Use Tax Exemption Certification form <a href="https://comptroller.texas.gov/taxes/sales/forms/01-339.pdf" target="_blank">here</a>.</p>
 
             <input type="submit" value="Submit">
         </form>
